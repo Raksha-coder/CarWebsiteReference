@@ -1,0 +1,75 @@
+<div class="container">
+    <ng-container *ngIf="switch;else login">
+    <div class="register">
+        <div>
+            <h1>Register Please!!</h1>
+        </div>
+        <form [formGroup]="registerform" (submit)="OnRegister(registerform.value)">
+            <div>
+                <input type="text" name="username" placeholder="Enter Username" formControlName="username">
+            </div>
+
+            <div>
+                <input type="text" name="password" placeholder="Enter Password" formControlName="password">
+            </div>
+
+            <div>
+                <input type="text" name="email" placeholder="Enter Email" formControlName="email">
+            </div>
+
+            <!-- phone num -->
+            <div>
+                <input type="text" name="phoneNumber" placeholder="Enter Phone Number" formControlName="phoneNumber">
+            </div>
+
+
+            <div>
+                <select name="role" formControlName="role">
+                        <option value="seller">Seller</option>
+                        <option value="buyer">Buyer</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="submit" value="Register">
+            </div>
+        </form>
+
+        <div class="switch">
+            already Registered?<button (click)="Switch()" class="brn-switch">click here</button>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-template #login>
+    <div class="login">
+        <div>
+            <h1>Login Please!!</h1>
+        </div>
+        <form [formGroup]="loginform" (submit)="OnLogin(loginform.value)">
+            <div>
+                <input type="text" name="username" placeholder="Enter Username" formControlName="username">
+            </div>
+
+            <div>
+                <input type="text" name="password" placeholder="Enter Password" formControlName="password">
+            </div>
+
+
+            <div>
+                <input type="submit" value="Login">
+            </div>
+        </form>
+
+        <div class="switch">
+            haven't registered?<button (click)="Switch()" class="brn-switch">click here</button>
+        </div>
+
+        <div class="forgotPassword">
+              <a routerLink="/passwordReset">forgot Password?</a>
+        </div>
+    </div>
+</ng-template>
+
+</div>

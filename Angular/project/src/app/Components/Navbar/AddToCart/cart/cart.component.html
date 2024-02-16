@@ -1,0 +1,9 @@
+<div class="cart-container">
+    <div *ngFor="let cart of allCarts" class="cart-item">
+        <div class="cart-name">{{cart.name}}</div>
+        <div class="cart-contact">{{cart.contactDetails}}</div>
+        <div class="cart-price">{{cart.price}}</div>
+        <div class="cart-category">{{cart.category}}</div>
+        <button mat-raised-button color="warn" (click)="Remove(cart.id)">Remove</button>   
+    </div>
+</div>

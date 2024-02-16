@@ -1,0 +1,33 @@
+
+<ng-container *ngIf="clicked;else showForm">
+    <h1>More Details</h1>
+    <div>
+        <div>{{carbyid.id}}</div>
+        <div>{{carbyid.name}} </div>
+        <div>{{carbyid.price}} </div> 
+        <div>{{carbyid.contactDetails}} </div> 
+        <div>{{carbyid.category}}</div>
+        <div *ngIf="role == 'seller'">
+            <button (click)="edit(carbyid.id)">Edit</button>
+        </div>
+       
+    </div>
+  
+    
+</ng-container>
+
+
+<ng-template #showForm>
+    <h3>Update The Cars etails</h3>
+    <form [formGroup]="editform" (submit)="Update(editform.value)">
+        <input type="text" name="name" formControlName="name">
+        <input type="text" name="price" formControlName="price">
+        <input type="text" name="contactDetails" formControlName="contactDetails">
+        <input type="text" name="category" formControlName="category" >
+        <input type="submit" value="Update">
+    </form>
+
+    <div>
+        <button (click)="GoBack()">Back To Car</button>
+    </div>
+</ng-template>

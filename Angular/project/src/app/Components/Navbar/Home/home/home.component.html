@@ -1,0 +1,17 @@
+
+<div class="Container">
+    <div class="title">
+        All Cars
+    </div>
+    <div *ngFor="let value of Cars" class="car-item">
+        <div class="car-name">{{value.name}}</div>
+        <div class="contact-details">{{value.contactDetails}}</div>
+        <div class="price">{{value.price}}</div>
+        <div class="category">{{value.category}}</div>
+        <a [routerLink]="['moredetails',value.id]">
+            <button class="details-button">More Details</button>
+        </a>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

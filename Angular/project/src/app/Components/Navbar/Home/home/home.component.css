@@ -1,0 +1,43 @@
+.Container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.car-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.car-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.contact-details,
+.price,
+.category {
+    margin-top: 5px;
+}
+
+.details-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.details-button:hover {
+    background-color: #2980b9;
+}

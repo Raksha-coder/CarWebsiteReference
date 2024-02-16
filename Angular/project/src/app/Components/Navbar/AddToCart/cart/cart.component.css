@@ -1,0 +1,21 @@
+.cart-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
+
+.cart-name {
+    font-weight: bold;
+}
+
+.cart-contact,
+.cart-price,
+.cart-category {
+    margin-top: 5px;
+}

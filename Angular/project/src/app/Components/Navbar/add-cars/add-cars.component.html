@@ -1,0 +1,46 @@
+
+<div class="container">
+
+
+    <h1>Add New Car</h1>
+
+    <form [formGroup]="addCar">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required  formControlName="name">
+        <div class="warning" *ngIf="addCar.controls?.['name']?.touched">
+                <span *ngIf="addCar.controls?.['name']?.errors?.['required']">this field is required</span>
+        </div>
+
+
+
+        <label for="contactDetails">Contact Details:</label>
+        <input type="text" id="contactDetails" name="contactDetails" required formControlName="contactDetails">
+        <div class="warning" *ngIf="addCar.controls?.['contactDetails']?.touched">
+            <span *ngIf="addCar.controls?.['contactDetails']?.errors?.['required']">this field is required</span>
+            <span *ngIf="addCar.controls?.['contactDetails']?.errors?.['pattern']">please enter only numbers.</span>
+            <span *ngIf="addCar.controls?.['contactDetails']?.errors?.['min']">numbers should not be greater than 10</span>
+            <!-- <span *ngIf="addCar.controls?.['contactDetails']?.errors?.['max']">numbers should not be less than 10</span> -->
+        </div>
+
+
+        <label for="price">Price:</label>
+        <input type="text" id="price" name="price" required formControlName="price">
+        <div class="warning" *ngIf="addCar.controls?.['price']?.touched">
+            <span *ngIf="addCar.controls?.['price']?.errors?.['required']">this field is required</span>
+        </div>
+
+
+
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required formControlName="category">
+        <div class="warning" *ngIf="addCar.controls?.['category']?.touched">
+            <span *ngIf="addCar.controls?.['category']?.errors?.['required']">this field is required</span>
+        </div>
+
+
+
+        <input type="submit" value="Submit" (click)="onSubmit(addCar.value)">
+    </form>
+
+</div>

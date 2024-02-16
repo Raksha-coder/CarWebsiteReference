@@ -1,0 +1,47 @@
+.container{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+
+.register,.login{
+    background-color: #40A2E3;
+    padding: 15px;
+}
+
+form{
+    margin-top: 15px;
+}
+
+input,select{
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: none;
+}
+
+h1{
+    color: var(--secondary);
+}
+
+.switch{
+    margin-top: 15px;
+}
+
+.brn-switch{
+    border: none;
+    outline: none;
+    color: blue;
+    background-color: #40A2E3;
+    cursor: pointer;
+}
+
+input[type="submit"]{
+        background-color: black;
+        color: white;
+        outline: none;
+        border: none;
+        margin-top: 15px;
+}

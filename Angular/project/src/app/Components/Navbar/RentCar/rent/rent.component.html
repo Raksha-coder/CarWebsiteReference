@@ -1,0 +1,15 @@
+<div class="container">
+    <h1 class="title">Sell Your Cars</h1>
+
+    <div class="parentSell">
+        <ng-container *ngFor="let car of cars">
+            <div class="sell" *ngIf="car.category == 'sell'">
+                <div class="car-name">{{car.name}}</div>
+                <div class="car-price">{{car.price}}</div>
+                <div class="car-category">{{car.category}}</div>
+                <div class="contact-details">{{car.contactDetails}}</div>
+                <button class="add-to-cart-btn" (click)="addToCart(car)">Add To Cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

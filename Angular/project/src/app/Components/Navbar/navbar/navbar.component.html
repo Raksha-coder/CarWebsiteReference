@@ -1,0 +1,33 @@
+<div>
+    <div class="nav">
+
+        <div>
+            <a routerLink="home">Home</a>
+        </div>
+
+        <div>
+            <a  routerLink="buy">Buy Cars</a>
+        </div>
+
+        <div>
+            <a  routerLink="rent">Sell Cars</a>
+        </div>
+
+
+        <div>
+            <a  routerLink="addCar">Add New Car</a>
+        </div>
+
+
+        <div>
+            <a routerLink="cart">Add To Cart(0)</a>
+        </div>
+     
+        <div (click)="onSignOut()">
+            <a href="#">Sign Out</a>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
